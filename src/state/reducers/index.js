@@ -1,5 +1,5 @@
-import {createStore, applyMiddleware} from 'redux'
-import {compose, combineReducers} from 'redux-immutable'
+import {compose, createStore, applyMiddleware} from 'redux'
+import {combineReducers} from 'redux-immutable'
 import thunk from 'redux-thunk'
 import {autoRehydrate, persistStore} from 'redux-persist-immutable'
 
@@ -14,7 +14,7 @@ const mainReducer = combineReducers({
 })
 
 //Enable redux dev tools browser plugin.
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 const store = createStore(
   mainReducer

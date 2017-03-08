@@ -1,4 +1,4 @@
-import React, {/*PropTypes,*/ Component } from 'react'
+import React, {Component} from 'react'
 import styles from './index.css'
 import IPropTypes from 'react-immutable-proptypes'
 import moment from 'moment'

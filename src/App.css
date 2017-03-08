@@ -1,0 +1,82 @@
+/*defaults*/
+a {
+  cursor: pointer;
+  color: #808080;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #0f90b3;
+}
+
+a:hover {
+  color: #60d9fb;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* app */
+:local .app {
+  margin-bottom: 100px;
+}
+
+:local .appIntro {
+  font-size: large;
+}
+
+:local .formWrapper {
+  text-align: center;
+}
+
+/* This should be abstracted into a globals file or a 'page' base component */
+:local .pageWrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* sort control */
+:local .sortBar {
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid #ddd;
+}
+
+:local .sortBarLabel {
+  line-height: 30px;
+  padding: 0 5px;
+  color: #808080;
+}
+
+:local .button {
+  padding: 0 10px;
+  width: 85px;
+  display: inline-block;
+  height: 31px;
+  font-size: initial;
+  background: white;
+  border: 1px solid #DDD;
+  outline: none;
+}
+
+:local .stars {
+  composes: button;
+  border-radius: 3px 0 0 0;
+}
+:local .watches {
+  composes: button;
+}
+:local .lastUpdate {
+  composes: button;
+  border-radius: 0 3px 0 0
+}
+
+/* Form */
+:local .form {
+  margin-bottom: 20px;
+};
+:local .labelText {
+  color: #666;
+}

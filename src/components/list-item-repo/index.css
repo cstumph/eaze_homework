@@ -1,0 +1,33 @@
+:local .li {
+  text-align: left;
+  border-bottom: 1px solid #DDD;
+  list-style: none;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+:local .metaWrap {
+  display: flex;
+  align-items: right
+}
+
+:local .metadata {
+  padding: 0 10px;
+  min-width: 65px;
+}
+
+:local .name {
+  font-weight: bolder;
+  flex-grow: 1;
+}
+
+:local .stars {
+  composes: metadata
+}
+:local .watches {
+  composes: metadata
+}
+:local .lastUpdate {
+  composes: metadata
+}

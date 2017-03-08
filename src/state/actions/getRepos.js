@@ -30,12 +30,10 @@ const fetchRepos = (username, cb) => {
   const ghUser = new GH().getUser(username)
   ghUser.listRepos()
   .then( function gotUser (repos){
-    console.log('GOT REPOS', repos.data)
     cb(null, repos.data)
   })
-  .catch( function gotUserFail (err){
-    console.log('GOT ERR', err)
-    cb(err, null)
+  .catch(function gotUserFail (err){
+    cb(err.message, null)
   })
 }
 

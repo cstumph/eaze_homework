@@ -2,7 +2,7 @@
   "name": "homework-front-end",
   "version": "1.0.0",
   "private": true,
-  "homepage": "http://cstumph.github.io/lolwut",
+  "homepage": "http://cstumph.github.io/eaze_homework/",
   "devDependencies": {
     "enzyme": "^2.7.1",
     "gh-pages": "^0.12.0",

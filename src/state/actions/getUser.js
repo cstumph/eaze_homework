@@ -27,15 +27,13 @@ const success = (payload) => {
 const fetchUser = (username, cb) => {
   //This should at least be throttled with an increasing delay after several req/sec to avoid hitting the github rate limit
   //Additionally we could also write an action to fetch the allowance and display it in app.
-  const ghUser = new GH().getUser(username)
+  const ghUser = new GH({}).getUser(username)
   ghUser.getProfile()
   .then( function gotUser (user){
-    console.log('GOT USER', user.data)
     cb(null, user.data)
   })
   .catch( function gotUserFail (err){
-    console.log('GOT ERR', err)
-    cb(err, null)
+    cb(err.message, null)
   })
 }
 
@@ -50,7 +48,7 @@ export default (username) => {
 
     fetchUser(username, (err, user) => {
       err
-      ? dispatch(error(new Error(err)))
+      ? dispatch(error(err))
       : dispatch(success(user))
     })
   }

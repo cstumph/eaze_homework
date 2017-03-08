@@ -76,7 +76,18 @@ ul {
 /* Form */
 :local .form {
   margin-bottom: 20px;
-};
+}
 :local .labelText {
   color: #666;
+}
+:local .submit {
+  width: 70px;
+  margin: 0 10px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+:local .submit:disabled {
+  content: 'Fetching';
+  background-color: orange;
+  color: white;
 }

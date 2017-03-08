@@ -149,7 +149,12 @@ class App extends Component {
                   tabIndex="0">
                 </input>
               </label>
-              <input type="submit"></input>
+              <input
+                className={styles.submit}
+                type="submit"
+                disabled={this.props.user.get('loading') || this.props.repos.get('loading') ? 'disabled' : false}
+                value={this.props.user.get('loading') || this.props.repos.get('loading') ? 'Fetching' : 'Submit'}>
+              </input>
             </form>
 
           </div>
